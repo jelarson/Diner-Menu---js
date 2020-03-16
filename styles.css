@@ -1,0 +1,250 @@
+html * {
+  margin: 0;
+}
+
+.header {
+  display: flex;
+  background-color: maroon;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.social-media-links {
+  display: flex;
+  align-items: center;
+  width: 10vw;
+  justify-content: space-between;
+  padding-left: 5px;
+}
+
+.social-media-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 2em;
+  align-items: center;
+}
+
+.center-column .logo {
+  color: white;
+  font-size: 1.5em;
+}
+
+.other-pages-wrapper {
+  display: flex;
+  align-items: center;
+  width: 40vw;
+  justify-content: space-between;
+  padding-right: 5px;
+}
+
+.other-pages-wrapper a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.2em;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+}
+
+.order-now-bar {
+  background-color: grey;
+  display: flex;
+  color: white;
+  justify-content: space-around;
+  border-bottom: black solid;
+  border-top: black solid;
+  height: 40px;
+  align-items: center;
+  text-align: center;
+}
+
+.breakfast-lunch-dinner-bar {
+  background-color: teal;
+  display: flex;
+  width: 100vw;
+  justify-content: space-around;
+  height: 50px;
+  align-items: center;
+  border-bottom: black solid;
+  text-align: center;
+}
+
+.breakfast-lunch-dinner-bar a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.2em;
+}
+
+.b-l-d-menus  {
+  height: 515px;
+  display: flex;
+  border-bottom: black solid;
+}
+
+.breakfast-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 33vw;
+}
+
+.breakfast-menu p {
+  font-size: .8em;
+}
+
+.lunch-menu {
+  display: flex;
+  flex-direction: column;
+  width: 33vw;
+  border-right: black solid;
+  border-left: black solid;
+  align-items: center;
+  text-align: center;
+}
+
+.lunch-menu p {
+  font-size: .8em;
+}
+
+.dinner-menu {
+  display: flex;
+  flex-direction: column;
+  width: 33vw;
+  align-items: center;
+  text-align: center;
+}
+
+.dinner-menu p {
+  font-size: .8em;
+}
+
+.first-item img {
+  padding-top: 15px;
+  height: 150px;
+}
+
+.first-breakfast-item-button button {
+  margin-top: 15px;
+  background-color: maroon;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.second-item img {
+  height: 150px;
+  padding-top: 25px;
+}
+
+.second-breakfast-item-button button {
+  margin-top: 15px;
+  background-color: teal;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.first-lunch-item-button button {
+  margin-top: 15px;
+  background-color: teal;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.second-lunch-item-button  button {
+  margin-top: 15px;
+  background-color: maroon;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.first-dinner-item-button button {
+  margin-top: 15px;
+  background-color: maroon;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.second-dinner-item-button button {
+  margin-top: 15px;
+  background-color: teal;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.footer {
+  height: 150px;
+  background-color: maroon;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: black solid;
+}
+
+.shopping-cart-title  {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 15vw;
+}
+
+.current-check  {
+  background-color: grey;
+  width: 60vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-left: black solid;
+  border-right: black solid;
+  padding: 5px;
+  font-size: 30px;
+}
+
+.list-left {
+  width: 50vw;
+  font-size: 20px;
+}
+
+.list-right {
+  width: 50vw;
+  font-size: 20px;
+}
+
+.sub-total-wrapper  {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: space-around;
+  width: 25vw;
+}
+
+.check-out button {
+  background-color: teal;
+  border: black solid;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 35px;
+}

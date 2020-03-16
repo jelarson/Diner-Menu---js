@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lucy's Diner</title>
+  <script src="https://kit.fontawesome.com/23912d8913.js"></script>
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="header">
+    <div class="left-column">
+      <div class="social-media-links">
+        <div class="facebook-link">
+          <a href="#"><i class="fab fa-facebook-square"></i></a>
+        </div>
+        <div class="instagram-link">
+          <a href="#"><i class="fab fa-instagram-square"></i></a>
+        </div>
+        <div class="twitter-link">
+          <a href="#"><i class="fab fa-twitter-square"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="center-column">
+      <div class="logo">
+        <h1>Lucy's Diner</h1>
+      </div>
+    </div>
+    <div class="right-column">
+      <div class="other-pages-wrapper">
+        <div class="our-story-link">
+          <a href="#">Our Story</a>
+        </div>
+        <div class="catering-link">
+          <a href="#">Catering</a>
+        </div>
+        <div class="review">
+          <a href="#">Leave a review!</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="menu-wrapper">
+    <div class="order-now-bar">
+      <h2>Order Now!</h2>
+    </div>
+    <div class="breakfast-lunch-dinner-bar">
+      <div class="breakfast-menu-link">
+        <a href="#">Breakfast Menu<br>Served before 11 AM</a>
+      </div>
+      <div class="lunch-menu-link">
+        <a href="#">Lunch Menu<br>Served 11 AM to 4 PM</a>
+      </div>
+      <div class="dinner-menu-link">
+        <a href="#">Dinner Menu<br>Served after 4PM</a>
+      </div>
+    </div>
+    <div class="b-l-d-menus">
+      <div class="breakfast-menu">
+        <div class="first-item">
+          <img
+            src="https://reviewed-com-res.cloudinary.com/image/fetch/s--M4wQLwKf--/b_white,c_limit,cs_srgb,f_auto,fl_progressive.strip_profile,g_center,q_auto,w_972/https://reviewed-production.s3.amazonaws.com/1568123038734/Bfast.png"
+            alt="Pancakes and Eggs">
+          <p>Golden all-you-can-eat pancakes, served<br>with 2 over easy eggs and bacon. $9.99</p>
+          <div class="first-breakfast-item-button">
+            <button onclick="pancakes(subTotal)">Add to cart</button>
+          </div>
+        </div>
+        <div class="second-item">
+          <img
+            src="https://imgp0.schaer.com/sites/default/files/styles/header/public/2016-10/1323_French%20Toast%20Sticks.jpg?itok=7wU3wUtf"
+            alt="French Toast">
+          <p>2 slices of thick French Toast on whole<br>grain bread, served with season fruit. $6.99</p>
+          <div class="second-breakfast-item-button">
+            <button onclick="frenchToast()">Add to cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="lunch-menu">
+        <div class="first-item">
+          <img src="https://recipes-secure-graphics.grocerywebsite.com/0_GraphicsRecipes/4589_4k.jpg"
+            alt="Lunch Hamburger">
+          <p>A mouth-watering hamburger filled with all of<br>your favorite toppings, served with fries.
+            $8.99</p>
+          <div class="first-lunch-item-button">
+            <button onclick="burger()">Add to cart</button>
+          </div>
+        </div>
+        <div class="second-item">
+          <img
+            src="https://irepo.primecp.com/2019/05/411566/Copycat-TGI-Fridays-French-Dip_ExtraLarge1000_ID-3219044.jpg?v=3219044"
+            alt="French Dip Sandwich">
+          <p>A classic French Dip Sandwich with melted<br>Provolone, paired with a beef au jus sauce. $7.99</p>
+          <div class="second-lunch-item-button">
+            <button onclick="frenchDip()">Add to cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="dinner-menu">
+        <div class="first-item">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQYzheLj-VnwYE_4i93c_GwoAPi8kF2VWVmMLtakUKhYX-siaDf"
+            alt="Salmon">
+          <p>Pan seared Alaskan salmon, served on a<br>bed of seasonal vegetables. $20.99</p>
+          <div class="first-dinner-item-button">
+            <button onclick="salmon()">Add to cart</button>
+          </div>
+        </div>
+        <div class="second-item">
+          <img src="https://usercontent1.hubstatic.com/14192394_f1024.jpg" alt="Steak and Potatoes">
+          <p>A thick New York strip steak, served with the<br>chef's signiture sauce and pototoes. $22.99</p>
+          <div class="second-dinner-item-button">
+            <button onclick="steak()">Add to cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="shopping-cart-title">
+      <h1><i class="fas fa-shopping-cart"></i><br>Shopping Cart</h1>
+    </div>
+    <div class="current-check">
+      <div class="list-left">
+        <ul id="left">
+          <!-- <li>Item #1 <span> <button><i class="fas fa-trash-alt"></i></button></span></li>
+          <li>Item #2</li>
+          <li>Item #3</li> -->
+          <!-- <li>Item #4</li> -->
+        </ul>
+      </div>
+      <div class="list-right">
+        <ul id="right">
+          <!-- <li>Item #5</li>
+          <li>Item #6</li>
+          <li>Item #7</li>
+          <li>Item #8</li> -->
+        </ul>
+      </div>
+    </div>
+    <div class="sub-total-wrapper">
+      <div class="sub-total">
+        <h2>sub total <span id=js-sub-total></span></h2>
+      </div>
+      <div class="grand-total">
+        <h2>Total with tax and 15% tip <span id=js-grand-total></span></h2>
+      </div>
+      <div class="check-out">
+        <button>CHECKOUT</button>
+      </div>
+    </div>
+  </div>
+
+
+</body>
+
+<script src="diner.js"></script>
+
+
+</html>
