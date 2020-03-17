@@ -78,18 +78,27 @@ html * {
   font-size: 1.2em;
 }
 
-.b-l-d-menus  {
-  height: 515px;
+/* .b-l-d-menus  {
+  height: 42vw;
   display: flex;
+  border-bottom: black solid;
+} */
+
+.b-l-d-menus {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
   border-bottom: black solid;
 }
 
 .breakfast-menu {
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
   align-items: center;
   text-align: center;
-  width: 33vw;
+  /* width: 33vw; */
+  padding-bottom: 170px;
 }
 
 .breakfast-menu p {
@@ -99,11 +108,13 @@ html * {
 .lunch-menu {
   display: flex;
   flex-direction: column;
-  width: 33vw;
+  justify-content: space-around;
+  /* width: 33vw; */
   border-right: black solid;
   border-left: black solid;
   align-items: center;
   text-align: center;
+  padding-bottom: 170px;
 }
 
 .lunch-menu p {
@@ -113,9 +124,11 @@ html * {
 .dinner-menu {
   display: flex;
   flex-direction: column;
-  width: 33vw;
+  justify-content: space-around;
+  /* width: 33vw; */
   align-items: center;
   text-align: center;
+  padding-bottom: 170px;
 }
 
 .dinner-menu p {
@@ -124,7 +137,12 @@ html * {
 
 .first-item img {
   padding-top: 15px;
-  height: 150px;
+  height: 12vw;
+}
+
+.second-item img {
+  height: 12vw;
+  padding-top: 25px;
 }
 
 .first-breakfast-item-button button {
@@ -135,11 +153,7 @@ html * {
   text-align: center;
   text-decoration: none;
   font-size: 20px;
-}
-
-.second-item img {
-  height: 150px;
-  padding-top: 25px;
+  border: black solid;
 }
 
 .second-breakfast-item-button button {
@@ -150,6 +164,7 @@ html * {
   text-align: center;
   text-decoration: none;
   font-size: 20px;
+  border: black solid;
 }
 
 .first-lunch-item-button button {
@@ -160,6 +175,7 @@ html * {
   text-align: center;
   text-decoration: none;
   font-size: 20px;
+  border: black solid;
 }
 
 .second-lunch-item-button  button {
@@ -170,6 +186,7 @@ html * {
   text-align: center;
   text-decoration: none;
   font-size: 20px;
+  border: black solid;
 }
 
 .first-dinner-item-button button {
@@ -180,6 +197,7 @@ html * {
   text-align: center;
   text-decoration: none;
   font-size: 20px;
+  border: black solid;
 }
 
 .second-dinner-item-button button {
@@ -190,6 +208,7 @@ html * {
   text-align: center;
   text-decoration: none;
   font-size: 20px;
+  border: black solid;
 }
 
 .footer {
@@ -199,6 +218,9 @@ html * {
   display: flex;
   justify-content: space-between;
   border-bottom: black solid;
+  border-top: black solid;
+  position: fixed;
+  bottom: 0;
 }
 
 .shopping-cart-title  {
@@ -209,19 +231,25 @@ html * {
   width: 15vw;
 }
 
-.current-check  {
+#current-check  {
   background-color: grey;
   width: 60vw;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  /* display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-between; */
   border-left: black solid;
   border-right: black solid;
   padding: 5px;
-  font-size: 30px;
+  font-size: 17px;
+  grid-auto-flow: column;
 }
 
-.list-left {
+
+
+/* .list-left {
   width: 50vw;
   font-size: 20px;
 }
@@ -229,7 +257,7 @@ html * {
 .list-right {
   width: 50vw;
   font-size: 20px;
-}
+} */
 
 .sub-total-wrapper  {
   display: flex;

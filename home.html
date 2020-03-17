@@ -51,13 +51,13 @@
     </div>
     <div class="breakfast-lunch-dinner-bar">
       <div class="breakfast-menu-link">
-        <a href="#">Breakfast Menu<br>Served before 11 AM</a>
+        <a href="#">Breakfast Menu Specials<br>Served before 11 AM</a>
       </div>
       <div class="lunch-menu-link">
-        <a href="#">Lunch Menu<br>Served 11 AM to 4 PM</a>
+        <a href="#">Lunch Menu Specials<br>Served 11 AM to 4 PM</a>
       </div>
       <div class="dinner-menu-link">
-        <a href="#">Dinner Menu<br>Served after 4PM</a>
+        <a href="#">Dinner Menu Specials<br>Served after 4PM</a>
       </div>
     </div>
     <div class="b-l-d-menus">
@@ -68,7 +68,7 @@
             alt="Pancakes and Eggs">
           <p>Golden all-you-can-eat pancakes, served<br>with 2 over easy eggs and bacon. $9.99</p>
           <div class="first-breakfast-item-button">
-            <button onclick="pancakes(subTotal)">Add to cart</button>
+            <button onclick="pancakes()">Add to cart</button>
           </div>
         </div>
         <div class="second-item">
@@ -113,7 +113,7 @@
         </div>
         <div class="second-item">
           <img src="https://usercontent1.hubstatic.com/14192394_f1024.jpg" alt="Steak and Potatoes">
-          <p>A thick New York strip steak, served with the<br>chef's signiture sauce and pototoes. $22.99</p>
+          <p>A thick New York strip steak, served with the<br>chef's signiture sauce and potatoes. $22.99</p>
           <div class="second-dinner-item-button">
             <button onclick="steak()">Add to cart</button>
           </div>
@@ -126,37 +126,30 @@
     <div class="shopping-cart-title">
       <h1><i class="fas fa-shopping-cart"></i><br>Shopping Cart</h1>
     </div>
-    <div class="current-check">
-      <div class="list-left">
-        <ul id="left">
-          <!-- <li>Item #1 <span> <button><i class="fas fa-trash-alt"></i></button></span></li>
-          <li>Item #2</li>
-          <li>Item #3</li> -->
-          <!-- <li>Item #4</li> -->
-        </ul>
-      </div>
-      <div class="list-right">
-        <ul id="right">
-          <!-- <li>Item #5</li>
-          <li>Item #6</li>
-          <li>Item #7</li>
-          <li>Item #8</li> -->
-        </ul>
-      </div>
+    <div id="current-check">
+
     </div>
     <div class="sub-total-wrapper">
       <div class="sub-total">
-        <h2>sub total <span id=js-sub-total></span></h2>
+        <h2>Subtotal: <span id=js-sub-total></span></h2>
       </div>
       <div class="grand-total">
-        <h2>Total with tax and 15% tip <span id=js-grand-total></span></h2>
+        <h2>Total with tax and 15% tip: <span id=js-grand-total></span></h2>
       </div>
       <div class="check-out">
-        <button>CHECKOUT</button>
+        <!-- <button>CHECKOUT</button> -->
+        <button onclick="checkout()">CHECKOUT</button>
       </div>
     </div>
   </div>
 
+  <!-- <input type="button" id="popupbutton" onclick="popup(this)" />
+  <ul id="checkBundle">
+    <li><label><input type="checkbox" />test1</label>
+    <li><label><input type="checkbox" />test2</label>
+    <li><label><input type="checkbox" />test3</label>
+    <li><label><input type="checkbox" />test4</label>
+  </ul> -->
 
 </body>
 

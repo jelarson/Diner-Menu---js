@@ -6,137 +6,223 @@
 //   pancakeCheck.appendChild(pancakesLi)
 // }
 
-let listLeft = []
-let listRight = []
+let currentCheckList = []
 let subTotal = 0
-subTotalDisplay = document.getElementById("js-sub-total").innerHTML = `$${subTotal}`
-grandTotalDisplay = document.getElementById("js-grand-total").innerHTML = `$${subTotal + subTotal * .15 + subTotal * .0675}`
+let grandTotal = 0
+document.getElementById("js-sub-total").innerHTML = `$${subTotal}`
+document.getElementById("js-grand-total").innerHTML = `$${grandTotal}`
 
-// function grandTotalofCheck(subTotal) {
-//   totalTax = subTotal * 0.0675
-//   totalTip = subTotal * 0.15
-//   grandTotal = totalTax + totalTip + subTotal
+function addComment() {
+  prompt("Add any special instructions here:", "Ex: Medium rare, no onions, extra mayo")
+}
 
-//   return grandTotal
+function updateSubTotal(price) {
+  subTotal = Math.round((subTotal + price) * 100) / 100
+  document.getElementById("js-sub-total").innerHTML = `$${subTotal}`
+}
+
+function updateGrandTotal() {
+  grandTotal = (Math.round((subTotal + subTotal * 0.15 + subTotal * .0675) * 100)) / 100
+  document.getElementById("js-grand-total").innerHTML = `$${grandTotal}`
+}
+
+function pancakes() {
+  if (currentCheckList.length === 18) {
+    alert(`You can only have 18 items in your cart.`)
+    return
+  }
+
+  updateSubTotal(9.99)
+  updateGrandTotal()
+
+  if (currentCheckList.length < 18) {
+    let node = document.createElement("LI");
+    let pancakesLi = document.createTextNode("Pancakes - $9.99");
+    node.appendChild(pancakesLi);
+    document.getElementById("current-check").appendChild(node);
+    currentCheckList.push('pancake')
+    node.innerHTML = `Pancakes - $9.99 <button onclick='deletePancakes()' id='delete'><i class="fas fa-trash-alt"></i></button><button onclick='addComment()' id='comment'><i class="fas fa-comment-alt"></i></button>`
+    node.setAttribute('id', 'pancake-item')
+    return
+  }
+}
+
+// function deleteFunc(name, price) {
+//   let element = document.getElementById(name);
+//   element.parentNode.removeChild(element);
+//   updateSubTotal(price)
+//   updateGrandTotal()
+//   currentCheckList.pop()
 // }
 
-function pancakes(subTotal) {
-
-  if (listLeft.length < 6) {
-    let node = document.createElement("LI");
-    let pancakesLi = document.createTextNode("Pancakes - $9.99");
-    node.appendChild(pancakesLi);
-    document.getElementById("left").appendChild(node);
-    listLeft.push('pancake')
-  }
-  else {
-    let node = document.createElement("LI");
-    let pancakesLi = document.createTextNode("Pancakes - $9.99");
-    node.appendChild(pancakesLi);
-    document.getElementById("right").appendChild(node);
-    listRight.push('pancake')
-  }
-
-  return subTotal = subTotal + 9.99
+function deletePancakes() {
+  let element = document.getElementById('pancake-item');
+  element.parentNode.removeChild(element);
+  updateSubTotal(-9.99)
+  updateGrandTotal()
+  currentCheckList.pop()
 }
 
 function frenchToast() {
-  subTotal += 6.99
+  if (currentCheckList.length === 18) {
+    alert(`You can only have 18 items in your cart.`)
+    return
+  }
 
-  if (listLeft.length < 6) {
+  updateSubTotal(6.99)
+  updateGrandTotal()
+
+  if (currentCheckList.length < 18) {
     let node = document.createElement("LI");
     let frenchToastLi = document.createTextNode("French Toast - $6.99");
     node.appendChild(frenchToastLi);
-    document.getElementById("left").appendChild(node);
-    listLeft.push('french toast')
+    document.getElementById("current-check").appendChild(node);
+    currentCheckList.push('french toast')
+    node.innerHTML = `French Toast - $6.99 <button onclick='deleteFrenchToast()' id='delete'><i class="fas fa-trash-alt"></i></button><button onclick='addComment()' id='comment'><i class="fas fa-comment-alt"></i></button>`
+    node.setAttribute('id', 'french-toast-item')
+    return
   }
+}
 
-  else {
-    let node = document.createElement("LI");
-    let frenchToastLi = document.createTextNode("French Toast - $6.99");
-    node.appendChild(frenchToastLi);
-    document.getElementById("right").appendChild(node);
-    listRight.push('french toast')
-
-  }
+function deleteFrenchToast() {
+  let element = document.getElementById('french-toast-item');
+  element.parentNode.removeChild(element);
+  updateSubTotal(-6.99)
+  updateGrandTotal()
+  currentCheckList.pop()
 }
 
 function burger() {
-  subTotal += 8.99
+  if (currentCheckList.length === 18) {
+    alert(`You can only have 18 items in your cart.`)
+    return
+  }
 
-  if (listLeft.length < 6) {
+  updateSubTotal(8.99)
+  updateGrandTotal()
+
+  if (currentCheckList.length < 18) {
     let node = document.createElement("LI");
     let burgerLi = document.createTextNode("Hamburger - $8.99");
     node.appendChild(burgerLi);
-    document.getElementById("left").appendChild(node);
-    listLeft.push('hamburger')
+    document.getElementById("current-check").appendChild(node);
+    currentCheckList.push('hamburger')
+    node.innerHTML = `Hamburger - $8.99 <button onclick='deleteBurger()' id='delete'><i class="fas fa-trash-alt"></i></button><button onclick='addComment()' id='comment'><i class="fas fa-comment-alt"></i></button>`
+    node.setAttribute('id', 'burger-item')
+    return
   }
+}
 
-  else {
-    let node = document.createElement("LI");
-    let burgerLi = document.createTextNode("Hamburger - $8.99");
-    node.appendChild(burgerLi);
-    document.getElementById("right").appendChild(node);
-    listRight.push('hamburger')
-  }
+function deleteBurger() {
+  let element = document.getElementById('burger-item');
+  element.parentNode.removeChild(element);
+  updateSubTotal(-8.99)
+  updateGrandTotal()
+  currentCheckList.pop()
 }
 
 function frenchDip() {
-  subTotal += 7.99
+  if (currentCheckList.length === 18) {
+    alert(`You can only have 18 items in your cart.`)
+    return
+  }
 
-  if (listLeft.length < 6) {
+  updateSubTotal(7.99)
+  updateGrandTotal()
+
+  if (currentCheckList.length < 18) {
     let node = document.createElement("LI");
     let frenchDipLi = document.createTextNode("French Dip - $7.99");
     node.appendChild(frenchDipLi);
-    document.getElementById("left").appendChild(node);
-    listLeft.push('french dip')
+    document.getElementById("current-check").appendChild(node);
+    currentCheckList.push('french dip')
+    node.innerHTML = `French Dip - $7.99 <button onclick='deleteFrenchDip()' id='delete'><i class="fas fa-trash-alt"></i></button><button onclick='addComment()' id='comment'><i class="fas fa-comment-alt"></i></button>`
+    node.setAttribute('id', 'french-dip-item')
+    return
   }
+}
 
-  else {
-    let node = document.createElement("LI");
-    let frenchDipLi = document.createTextNode("French Dip - $7.99");
-    node.appendChild(frenchDipLi);
-    document.getElementById("right").appendChild(node);
-    listRight.push('french dip')
-  }
+function deleteFrenchDip() {
+  let element = document.getElementById('french-dip-item');
+  element.parentNode.removeChild(element);
+  updateSubTotal(-7.99)
+  updateGrandTotal()
+  currentCheckList.pop()
 }
 
 function salmon() {
-  subTotal += 20.99
+  if (currentCheckList.length === 18) {
+    alert(`You can only have 18 items in your cart.`)
+    return
+  }
 
-  if (listLeft.length < 6) {
+  updateSubTotal(20.99)
+  updateGrandTotal()
+
+  if (currentCheckList.length < 18) {
     let node = document.createElement("LI");
     let salmonLi = document.createTextNode("Salmon - $20.99");
     node.appendChild(salmonLi);
-    document.getElementById("left").appendChild(node);
-    listLeft.push('salmon')
+    document.getElementById("current-check").appendChild(node);
+    currentCheckList.push('salmon')
+    node.innerHTML = `Salmon - $20.99 <button onclick='deleteSalmon()' id='delete'><i class="fas fa-trash-alt"></i></button><button onclick='addComment()' id='comment'><i class="fas fa-comment-alt"></i></button>`
+    node.setAttribute('id', 'salmon-item')
+    return
   }
+}
 
-  else {
-    let node = document.createElement("LI");
-    let salmonLi = document.createTextNode("Salmon - $20.99");
-    node.appendChild(salmonLi);
-    document.getElementById("right").appendChild(node);
-    listRight.push('salmon')
-  }
+function deleteSalmon() {
+  let element = document.getElementById('salmon-item');
+  element.parentNode.removeChild(element);
+  updateSubTotal(-20.99)
+  updateGrandTotal()
+  currentCheckList.pop()
 }
 
 function steak() {
-  subTotal += 22.99
+  if (currentCheckList.length === 18) {
+    alert(`You can only have 18 items in your cart.`)
+    return
+  }
 
-  if (listLeft.length < 6) {
+  updateSubTotal(22.99)
+  updateGrandTotal()
+
+  if (currentCheckList.length < 18) {
     let node = document.createElement("LI");
     let steakLi = document.createTextNode("Steak - $22.99");
     node.appendChild(steakLi);
-    document.getElementById("left").appendChild(node);
-    listLeft.push('steak')
+    document.getElementById("current-check").appendChild(node);
+    currentCheckList.push('steak')
+    node.innerHTML = `Steak - $22.99 <button onclick='deleteSteak()' id='delete'><i class="fas fa-trash-alt"></i></button><button onclick='addComment()' id='comment'><i class="fas fa-comment-alt"></i></button>`
+    node.setAttribute('id', 'steak-item')
+    return
+  }
+}
+
+function deleteSteak() {
+  let element = document.getElementById('steak-item');
+  element.parentNode.removeChild(element);
+  updateSubTotal(-22.99)
+  updateGrandTotal()
+  currentCheckList.pop()
+}
+
+function checkout() {
+  if (grandTotal > 0) {
+    alert(`Thank you for your order! Your food will be ready in 30 minutes. Your order number is ${Math.floor(Math.random() * Math.floor(100))}. Please be ready to pay $${grandTotal} with cash or card.`)
   }
 
   else {
-    let node = document.createElement("LI");
-    let steakLi = document.createTextNode("Steak - $22.99");
-    node.appendChild(steakLi);
-    document.getElementById("right").appendChild(node);
-    listRight.push('steak')
+    alert(`You have nothing in your cart.`)
   }
 }
+
+// function popup() {
+//   var popwindow = document.getElementById("checkBundle");
+//   if (popwindow.style.display === "none") {
+//     popwindow.style.display = "block";
+//   } else {
+//     popwindow.style.display = "none";
+//   }
+// };
