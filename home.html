@@ -68,7 +68,19 @@
             alt="Pancakes and Eggs">
           <p>Golden all-you-can-eat pancakes, served<br>with 2 over easy eggs and bacon. $9.99</p>
           <div class="first-breakfast-item-button">
-            <button onclick="pancakes()">Add to cart</button>
+            <button onclick="sideMenuPopup('.breakfast-side-order-one')">Select Sides and Order</button>
+          </div>
+          <div class="breakfast-side-order-one" is-hidden="True">
+            <h3 class="sides-instructions">Please select 2 sides</h3>
+            <ul id="breakfast-sides-bundle">
+              <li><label><input id='br-one-check' onchange='boxChecker()' type="checkbox" />Toast</label>
+              <li><label><input id='br-one-check' onchange='boxChecker()' type="checkbox" />Hashbrowns</label>
+              <li><label><input id='br-one-check' onchange='boxChecker()' type="checkbox" />Sausage</label>
+              <li><label><input id='br-one-check' onchange='boxChecker()' type="checkbox" />Muffin</label>
+            </ul>
+            <div class="first-breakfast-item-button">
+              <button onclick="pancakes()">Add to cart</button>
+            </div>
           </div>
         </div>
         <div class="second-item">
@@ -77,7 +89,19 @@
             alt="French Toast">
           <p>2 slices of thick French Toast on whole<br>grain bread, served with season fruit. $6.99</p>
           <div class="second-breakfast-item-button">
-            <button onclick="frenchToast()">Add to cart</button>
+            <button onclick="sideMenuPopup('.breakfast-side-order-two')">Select Sides and Order</button>
+          </div>
+          <div class="breakfast-side-order-two" is-hidden="True">
+            <h3 class="sides-instructions">Please select 2 sides</h3>
+            <ul id="breakfast-sides-bundle">
+              <li><label><input type="checkbox" />Toast</label>
+              <li><label><input type="checkbox" />Hashbrowns</label>
+              <li><label><input type="checkbox" />Sausage</label>
+              <li><label><input type="checkbox" />Muffin</label>
+            </ul>
+            <div class="first-breakfast-item-button">
+              <button onclick="frenchToast()">Add to cart</button>
+            </div>
           </div>
         </div>
       </div>
@@ -88,7 +112,19 @@
           <p>A mouth-watering hamburger filled with all of<br>your favorite toppings, served with fries.
             $8.99</p>
           <div class="first-lunch-item-button">
-            <button onclick="burger()">Add to cart</button>
+            <button onclick="sideMenuPopup('.lunch-side-order-one')">Select Sides and Order</button>
+          </div>
+          <div class="lunch-side-order-one" is-hidden="True">
+            <h3 class="sides-instructions">Please select 2 sides</h3>
+            <ul id="lunch-sides-bundle">
+              <li><label><input type="checkbox" />Chicken Noodle Soup</label>
+              <li><label><input type="checkbox" />Coleslaw</label>
+              <li><label><input type="checkbox" />Fruit Salad</label>
+              <li><label><input type="checkbox" />Mac & Cheese</label>
+            </ul>
+            <div class="first-lunch-item-button">
+              <button onclick="burger()">Add to cart</button>
+            </div>
           </div>
         </div>
         <div class="second-item">
@@ -97,7 +133,19 @@
             alt="French Dip Sandwich">
           <p>A classic French Dip Sandwich with melted<br>Provolone, paired with a beef au jus sauce. $7.99</p>
           <div class="second-lunch-item-button">
-            <button onclick="frenchDip()">Add to cart</button>
+            <button onclick="sideMenuPopup('.lunch-side-order-two')">Select Sides and Order</button>
+          </div>
+          <div class="lunch-side-order-two" is-hidden="True">
+            <h3 class="sides-instructions">Please select 2 sides</h3>
+            <ul id="lunch-sides-bundle">
+              <li><label><input type="checkbox" />Chicken Noodle Soup</label>
+              <li><label><input type="checkbox" />Coleslaw</label>
+              <li><label><input type="checkbox" />Fruit Salad</label>
+              <li><label><input type="checkbox" />Mac & Cheese</label>
+            </ul>
+            <div class="second-lunch-item-button">
+              <button onclick="frenchDip()">Add to cart</button>
+            </div>
           </div>
         </div>
       </div>
@@ -108,14 +156,38 @@
             alt="Salmon">
           <p>Pan seared Alaskan salmon, served on a<br>bed of seasonal vegetables. $20.99</p>
           <div class="first-dinner-item-button">
-            <button onclick="salmon()">Add to cart</button>
+            <button onclick="sideMenuPopup('.dinner-side-order-one')">Select Sides and Order</button>
+          </div>
+          <div class="dinner-side-order-one" is-hidden="True">
+            <h3 class="sides-instructions">Please select 2 sides</h3>
+            <ul id="dinner-sides-bundle">
+              <li><label><input type="checkbox" />Baked Potatoe</label>
+              <li><label><input type="checkbox" />Caesar Salad</label>
+              <li><label><input type="checkbox" />Dinner Roll</label>
+              <li><label><input type="checkbox" />Grilled Asparagus</label>
+            </ul>
+            <div class="first-dinner-item-button">
+              <button onclick="salmon()">Add to cart</button>
+            </div>
           </div>
         </div>
         <div class="second-item">
           <img src="https://usercontent1.hubstatic.com/14192394_f1024.jpg" alt="Steak and Potatoes">
           <p>A thick New York strip steak, served with the<br>chef's signiture sauce and potatoes. $22.99</p>
           <div class="second-dinner-item-button">
-            <button onclick="steak()">Add to cart</button>
+            <button onclick="sideMenuPopup('.dinner-side-order-two')">Select Sides and Order</button>
+          </div>
+          <div class="dinner-side-order-two" is-hidden="True">
+            <h3 class="sides-instructions">Please select 2 sides</h3>
+            <ul id="dinner-sides-bundle">
+              <li><label><input type="checkbox" />Baked Potatoe</label>
+              <li><label><input type="checkbox" />Caesar Salad</label>
+              <li><label><input type="checkbox" />Dinner Roll</label>
+              <li><label><input type="checkbox" />Grilled Asparagus</label>
+            </ul>
+            <div class="first-dinner-item-button">
+              <button onclick="steak()">Add to cart</button>
+            </div>
           </div>
         </div>
       </div>
@@ -134,22 +206,13 @@
         <h2>Subtotal: <span id=js-sub-total></span></h2>
       </div>
       <div class="grand-total">
-        <h2>Total with tax and 15% tip: <span id=js-grand-total></span></h2>
+        <h2>Total with tax<br>and 15% tip: <span id=js-grand-total></span></h2>
       </div>
       <div class="check-out">
-        <!-- <button>CHECKOUT</button> -->
         <button onclick="checkout()">CHECKOUT</button>
       </div>
     </div>
   </div>
-
-  <!-- <input type="button" id="popupbutton" onclick="popup(this)" />
-  <ul id="checkBundle">
-    <li><label><input type="checkbox" />test1</label>
-    <li><label><input type="checkbox" />test2</label>
-    <li><label><input type="checkbox" />test3</label>
-    <li><label><input type="checkbox" />test4</label>
-  </ul> -->
 
 </body>
 

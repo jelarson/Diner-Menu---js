@@ -211,6 +211,40 @@ html * {
   border: black solid;
 }
 
+#delete {
+  background-color: grey;
+  font-size: 15px;
+  color: white;
+  border: none;
+}
+
+#comment {
+  background-color: grey;
+  font-size: 15px;
+  color: white;
+  border: none;
+  text-align: right;
+}
+
+#breakfast-sides-bundle {
+  text-align: left;
+  padding-top: 6px;
+}
+
+#lunch-sides-bundle {
+  text-align: left;
+  padding-top: 6px;
+}
+
+#dinner-sides-bundle {
+  text-align: left;
+  padding-top: 6px;
+}
+
+.sides-instructions {
+  padding-top: 10px;
+}
+
 .footer {
   height: 150px;
   background-color: maroon;
@@ -249,16 +283,6 @@ html * {
 
 
 
-/* .list-left {
-  width: 50vw;
-  font-size: 20px;
-}
-
-.list-right {
-  width: 50vw;
-  font-size: 20px;
-} */
-
 .sub-total-wrapper  {
   display: flex;
   flex-direction: column;
@@ -276,3 +300,75 @@ html * {
   text-decoration: none;
   font-size: 35px;
 }
+
+
+.breakfast-side-order-one[is-hidden="True"] {
+  display: none;;
+}
+
+.breakfast-side-order-one[is-hidden="False"] {
+  display: block;
+}
+
+.breakfast-side-order-two[is-hidden="True"] {
+  display: none;
+}
+
+.breakfast-side-order-two[is-hidden="False"] {
+  display: block;
+}
+
+.lunch-side-order-one[is-hidden="True"] {
+  display: none;
+}
+
+.lunch-side-order-one[is-hidden="False"] {
+  display: block;
+}
+
+.lunch-side-order-two[is-hidden="True"] {
+  display: none;
+}
+
+.lunch-side-order-two[is-hidden="False"] {
+  display: block;
+}
+
+.dinner-side-order-one[is-hidden="True"] {
+  display: none;
+}
+
+.dinner-side-order-one[is-hidden="False"] {
+  display: block;
+}
+
+.dinner-side-order-two[is-hidden="True"] {
+  display: none;
+}
+
+.dinner-side-order-two[is-hidden="False"] {
+  display: block;
+}
+/*     
+pancake item
+psition: relative
+width: 100% or less
+comment and trash can
+position: absolute;
+    right: 25px;
+    top: 2px; */
+
+/* onchange - like onclick
+function - event - function(event) - html  */
+
+/* date object - js */
+.ajljsdklj p {
+  display: block;
+}
+
+.ajlfjal p[is-hidden='true'] {
+display: none;          
+}
+/* is-hidden = 'true'
+  is-hidden = 'false'
+  display: none */
