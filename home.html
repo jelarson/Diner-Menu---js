@@ -38,8 +38,8 @@
         <div class="catering-link">
           <a href="#">Catering</a>
         </div>
-        <div class="review">
-          <a href="#">Leave a review!</a>
+        <div class="hours">
+          <a href="#">Hours: 7 AM to Midnight</a>
         </div>
       </div>
     </div>
@@ -73,10 +73,10 @@
           <div class="breakfast-side-order-one" is-hidden="True">
             <h3 class="sides-instructions">Please select 2 sides</h3>
             <ul id="breakfast-sides-bundle">
-              <li><label><input id='br-one-check' onchange='boxChecker()' type="checkbox" />Toast</label>
-              <li><label><input id='br-one-check' onchange='boxChecker()' type="checkbox" />Hashbrowns</label>
-              <li><label><input id='br-one-check' onchange='boxChecker()' type="checkbox" />Sausage</label>
-              <li><label><input id='br-one-check' onchange='boxChecker()' type="checkbox" />Muffin</label>
+              <li><label><input onchange='boxChecker(this, pancakeArray)' type="checkbox" />Toast</label>
+              <li><label><input onchange='boxChecker(this, pancakeArray)' type="checkbox" />Hashbrowns</label>
+              <li><label><input onchange='boxChecker(this, pancakeArray)' type="checkbox" />Sausage</label>
+              <li><label><input onchange='boxChecker(this, pancakeArray)' type="checkbox" />Muffin</label>
             </ul>
             <div class="first-breakfast-item-button">
               <button onclick="pancakes()">Add to cart</button>
@@ -94,12 +94,12 @@
           <div class="breakfast-side-order-two" is-hidden="True">
             <h3 class="sides-instructions">Please select 2 sides</h3>
             <ul id="breakfast-sides-bundle">
-              <li><label><input type="checkbox" />Toast</label>
-              <li><label><input type="checkbox" />Hashbrowns</label>
-              <li><label><input type="checkbox" />Sausage</label>
-              <li><label><input type="checkbox" />Muffin</label>
+              <li><label><input onchange='boxChecker(this, frenchToastArray)' type="checkbox" />Toast</label>
+              <li><label><input onchange='boxChecker(this, frenchToastArray)' type="checkbox" />Hashbrowns</label>
+              <li><label><input onchange='boxChecker(this, frenchToastArray)' type="checkbox" />Sausage</label>
+              <li><label><input onchange='boxChecker(this, frenchToastArray)' type="checkbox" />Muffin</label>
             </ul>
-            <div class="first-breakfast-item-button">
+            <div class="second-breakfast-item-button">
               <button onclick="frenchToast()">Add to cart</button>
             </div>
           </div>
@@ -117,10 +117,10 @@
           <div class="lunch-side-order-one" is-hidden="True">
             <h3 class="sides-instructions">Please select 2 sides</h3>
             <ul id="lunch-sides-bundle">
-              <li><label><input type="checkbox" />Chicken Noodle Soup</label>
-              <li><label><input type="checkbox" />Coleslaw</label>
-              <li><label><input type="checkbox" />Fruit Salad</label>
-              <li><label><input type="checkbox" />Mac & Cheese</label>
+              <li><label><input onchange='boxChecker(this, burgerArray)' type="checkbox" />Chicken Noodle Soup</label>
+              <li><label><input onchange='boxChecker(this, burgerArray)' type="checkbox" />Coleslaw</label>
+              <li><label><input onchange='boxChecker(this, burgerArray)' type="checkbox" />Fruit Salad</label>
+              <li><label><input onchange='boxChecker(this, burgerArray)' type="checkbox" />Mac & Cheese</label>
             </ul>
             <div class="first-lunch-item-button">
               <button onclick="burger()">Add to cart</button>
@@ -138,10 +138,11 @@
           <div class="lunch-side-order-two" is-hidden="True">
             <h3 class="sides-instructions">Please select 2 sides</h3>
             <ul id="lunch-sides-bundle">
-              <li><label><input type="checkbox" />Chicken Noodle Soup</label>
-              <li><label><input type="checkbox" />Coleslaw</label>
-              <li><label><input type="checkbox" />Fruit Salad</label>
-              <li><label><input type="checkbox" />Mac & Cheese</label>
+              <li><label><input onchange='boxChecker(this, frenchDipArray)' type="checkbox" />Chicken Noodle
+                  Soup</label>
+              <li><label><input onchange='boxChecker(this, frenchDipArray)' type="checkbox" />Coleslaw</label>
+              <li><label><input onchange='boxChecker(this, frenchDipArray)' type="checkbox" />Fruit Salad</label>
+              <li><label><input onchange='boxChecker(this, frenchDipArray)' type="checkbox" />Mac & Cheese</label>
             </ul>
             <div class="second-lunch-item-button">
               <button onclick="frenchDip()">Add to cart</button>
@@ -161,10 +162,10 @@
           <div class="dinner-side-order-one" is-hidden="True">
             <h3 class="sides-instructions">Please select 2 sides</h3>
             <ul id="dinner-sides-bundle">
-              <li><label><input type="checkbox" />Baked Potatoe</label>
-              <li><label><input type="checkbox" />Caesar Salad</label>
-              <li><label><input type="checkbox" />Dinner Roll</label>
-              <li><label><input type="checkbox" />Grilled Asparagus</label>
+              <li><label><input onchange='boxChecker(this, salmonArray)' type="checkbox" />Baked Potatoe</label>
+              <li><label><input onchange='boxChecker(this, salmonArray)' type="checkbox" />Caesar Salad</label>
+              <li><label><input onchange='boxChecker(this, salmonArray)' type="checkbox" />Dinner Roll</label>
+              <li><label><input onchange='boxChecker(this, salmonArray)' type="checkbox" />Grilled Asparagus</label>
             </ul>
             <div class="first-dinner-item-button">
               <button onclick="salmon()">Add to cart</button>
@@ -180,12 +181,12 @@
           <div class="dinner-side-order-two" is-hidden="True">
             <h3 class="sides-instructions">Please select 2 sides</h3>
             <ul id="dinner-sides-bundle">
-              <li><label><input type="checkbox" />Baked Potatoe</label>
-              <li><label><input type="checkbox" />Caesar Salad</label>
-              <li><label><input type="checkbox" />Dinner Roll</label>
-              <li><label><input type="checkbox" />Grilled Asparagus</label>
+              <li><label><input onchange='boxChecker(this, steakArray)' type="checkbox" />Baked Potatoe</label>
+              <li><label><input onchange='boxChecker(this, steakArray)' type="checkbox" />Caesar Salad</label>
+              <li><label><input onchange='boxChecker(this, steakArray)' type="checkbox" />Dinner Roll</label>
+              <li><label><input onchange='boxChecker(this, steakArray)' type="checkbox" />Grilled Asparagus</label>
             </ul>
-            <div class="first-dinner-item-button">
+            <div class="second-dinner-item-button">
               <button onclick="steak()">Add to cart</button>
             </div>
           </div>
