@@ -174,6 +174,7 @@ function burger() {
 
   if (today.getHours() < 11) {
     alert("We are not serving lunch yet today")
+    return
   }
 
   if (burgerArray.length > 2) {
@@ -225,6 +226,7 @@ function frenchDip() {
 
   if (today.getHours() < 11) {
     alert("We are not serving lunch yet today")
+    return
   }
 
   if (frenchDipArray.length > 2) {
@@ -356,6 +358,7 @@ function steak() {
 function checkout() {
   if (grandTotal > 0) {
     alert(`Thank you for your order! Your food will be ready in 30 minutes. Your order number is ${Math.floor(Math.random() * Math.floor(100))}. Please be ready to pay $${grandTotal} with cash or card.`)
+    location.reload()
   }
 
   else {

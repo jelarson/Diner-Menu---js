@@ -7,6 +7,7 @@ html * {
   background-color: maroon;
   justify-content: space-between;
   align-items: center;
+  width: 100vw;
 }
 
 .social-media-links {
@@ -34,7 +35,7 @@ html * {
   align-items: center;
   width: 40vw;
   justify-content: space-between;
-  padding-right: 15px;
+  padding-right: 25px;
 }
 
 .other-pages-wrapper a {
@@ -59,6 +60,7 @@ html * {
   height: 45px;
   align-items: center;
   text-align: center;
+  width: 100vw;
 }
 
 .breakfast-lunch-dinner-bar {
@@ -78,12 +80,6 @@ html * {
   font-size: 1.2em;
 }
 
-/* .b-l-d-menus  {
-  height: 42vw;
-  display: flex;
-  border-bottom: black solid;
-} */
-
 .b-l-d-menus {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -97,19 +93,17 @@ html * {
   justify-content: space-around;
   align-items: center;
   text-align: center;
-  /* width: 33vw; */
   padding-bottom: 170px;
 }
 
 .breakfast-menu p {
-  font-size: .8em;
+  font-size: 1.2em;
 }
 
 .lunch-menu {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  /* width: 33vw; */
   border-right: black solid;
   border-left: black solid;
   align-items: center;
@@ -118,21 +112,20 @@ html * {
 }
 
 .lunch-menu p {
-  font-size: .8em;
+  font-size: 1.2em;
 }
 
 .dinner-menu {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  /* width: 33vw; */
   align-items: center;
   text-align: center;
   padding-bottom: 170px;
 }
 
 .dinner-menu p {
-  font-size: .8em;
+  font-size: 1.2em;
 }
 
 .first-item img {
