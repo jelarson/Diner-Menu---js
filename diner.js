@@ -1,4 +1,4 @@
-
+console.log('Created by: Jess E Larson Link to my GitHub: https://github.com/jelarson/Diner-Menu---js')
 let currentCheckList = []
 let subTotal = 0
 let grandTotal = 0
